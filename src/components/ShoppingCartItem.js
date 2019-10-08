@@ -1,8 +1,10 @@
 import React from 'react';
+import CartContext from '../contexts/CartContext';
 
 const Item = props => {
 
-	const totalPrice = (props.price*props.quantity).toFixed(2)
+	const {cart, removeItem}= React.useContext(CartContext);
+	const {totalPrice }= (props.price*props.quantity).toFixed(2)
 
 	return (
 
